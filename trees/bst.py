@@ -33,6 +33,14 @@ def get(x, key):
         return None
 
 
+def show_contents(x):
+        if (x == None): return
+
+        show_contents(x.left)
+        print((x.key, x.val))
+        show_contents(x.right)
+
+
 root = Node(5, 'e')
 insert(root, 6, 'f')
 insert(root, 3, 'c')
@@ -42,7 +50,8 @@ insert(root, 10, 'j')
 insert(root, 2, 'b')
 
 a = get(root, 3)
-        
-print(a)
+
+show_contents(root)
+
 
 
