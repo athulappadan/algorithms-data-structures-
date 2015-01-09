@@ -2,7 +2,7 @@
 
 import bag
 
-class Graph:
+class Graph():
         def __init__(self, V):
                 self.adj_list = []
                 self.edges = 0

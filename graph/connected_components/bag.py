@@ -1,6 +1,6 @@
 # simple bag implementation
 
-class Bag:
+class Bag():
         def __init__(self):
                 self.bag = []
 
