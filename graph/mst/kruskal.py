@@ -4,11 +4,12 @@ import mst
 import min_heap
 import QF
 
-def kruskalPaths(G):
-        k_mst = mst.MST()
-        pq = min_heap.PQ()
-        uf = QF.UF(G.V)
+G = mst.G
+k_mst = mst.MST()
+pq = min_heap.PQ()
+uf = QF.UF(G.V)
 
+def kruskalPaths(G):
         for e in G.allEdges():
                 pq.insert(e)
 
@@ -28,6 +29,5 @@ def show_mst(k_mst):
         for e in k_mst.edges():
                 print(e.v, e.w, e.weight)
 
-G = mst.G
 kl = kruskalPaths(G)
 show_mst(kl)
